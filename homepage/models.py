@@ -6,7 +6,7 @@ from django.urls import reverse
 from PIL import Image
 # from notifications.signals import notify
 from django.utils.text import Truncator
-
+from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     caption = models.CharField(max_length=2200, blank=True)
@@ -20,7 +20,7 @@ class Post(models.Model):
 
 class PostImage(models.Model):
     post = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
-    modelimage = models.ImageField(upload_to='post_images')
+    modelimage = CloudinaryField('images')
 
 
 class Comment(models.Model):

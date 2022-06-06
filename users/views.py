@@ -17,9 +17,12 @@ def register(request):
         if request.method == 'POST':
             form = UserRegisterForm(request.POST)
             if form.is_valid():
-                form.save()
+                user = form.save(commit=False)
+                user.save()
                 username = form.cleaned_data.get('username')
                 messages.success(request, f'Your account has been created. Log in now!')
+                profile = Profile.objects.create(user = user)
+                profile.save()
                 return redirect('login')
         else:
             form = UserRegisterForm()
@@ -36,9 +39,9 @@ def profile(request):
             p_form.save()
             messages.success(request, f'Your account has been updated')
             return redirect('profile')  # prevents post get redirect pattern. sends a get request instead of post request
-    else:
-        u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    u_form = UserUpdateForm(instance=request.user)
+    p_form = ProfileUpdateForm(instance=request.user)
     context = {
         'posts': Post.objects.all(),
         'postimages': PostImage.objects.all(),

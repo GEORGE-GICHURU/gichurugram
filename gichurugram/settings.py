@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,6 +38,7 @@ INSTALLED_APPS = [
     'directmessages.apps.DirectmessagesConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,10 +81,22 @@ WSGI_APPLICATION = 'gichurugram.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instagram_2',
+        'USER': 'postgres',
+        'PASSWORD': 'gichuru',
     }
 }
 
@@ -124,6 +140,13 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+cloudinary.config( 
+  cloud_name = "dwhhmoeoi", 
+  api_key = "533326415941455", 
+  api_secret = "dF7ac7R6k3UYcwVnZXJU9iJ9knQ",
+)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

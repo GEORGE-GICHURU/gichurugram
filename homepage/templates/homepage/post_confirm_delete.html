@@ -1,12 +1,13 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
+{% load cloudinary %}
     <div class='row justify-content-center' id='update-delete'>
         <form method="POST">
             {% csrf_token %}
             <fieldset class="input-group mb-3">
                 <div class='input-group-append'>
                 <button class='btn btn-outline-danger' type='submit'>Yes, Delete Post</button>
-                <a class='btn btn-outline-secondary' href="{% url 'post_detail' post.id %}">Cancel</a>
+                <a class='btn btn-outline-secondary' href="{% url 'post-detail' post.id %}">Cancel</a>
                 </div>
             </fieldset>
         </form>

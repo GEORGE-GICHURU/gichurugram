@@ -1,6 +1,7 @@
 {% extends 'homepage/base.html' %}
 {% load caps %}
 {% block content %}
+{% load cloudinary %}
     <a href="{% url 'public-profile' p.author.username %}" id="author-link">
         <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
         <strong>{{ p.author }}</strong>
