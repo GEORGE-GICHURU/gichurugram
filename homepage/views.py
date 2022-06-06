@@ -173,7 +173,7 @@ class LikeListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         # org qs
         qs = super().get_queryset()
-        # filter by var from captured url
+        # filter by var from captured ur
         return qs.filter(post__pk=self.kwargs['pk'])
 
 
