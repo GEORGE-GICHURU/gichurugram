@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from PIL import Image
 from django.utils import timezone
 from cloudinary.models import CloudinaryField
-# from notifications.signals import notify
+# from notifications.signals import notif
 
 
 class Profile(models.Model):
