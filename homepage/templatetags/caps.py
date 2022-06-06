@@ -12,5 +12,5 @@ def upper(value):
     else:
         return value.upper()
 
-
+#
 upper.is_safe = True
