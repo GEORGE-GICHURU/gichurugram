@@ -51,4 +51,4 @@ class Like(models.Model):
 
     def save(self, *args, **kwargs):
         super(Like, self).save(*args, **kwargs)
-        # notify.send(self.liker, recipient=self.post.author, verb='liked your post!' action_object=self.post, description='like', target=self)
+        # notify.send(self.liker, recipient=self.post.author, verb='liked your post!', action_object=self.post, description='like', target=self)
