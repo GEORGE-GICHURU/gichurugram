@@ -13,4 +13,3 @@ class MessageTestCase(TestCase):
         message = self.create_message()
         self.assertTrue(isinstance(message, Message))
         self.assertEqual(message.__str__(), message.content)
-#
