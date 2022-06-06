@@ -27,6 +27,7 @@ As a user I would like to:
 - Can follow or unfollow other users
 - Can edit profile account
 - Can view the explore page
+- Can be able to send a direct message to another user 
 
 ## Behaviour Driven Development
 
