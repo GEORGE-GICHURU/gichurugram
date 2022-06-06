@@ -11,3 +11,6 @@ class MessageForm(forms.ModelForm):
         super(MessageForm, self).__init__(*args, **kwargs)
         self.fields['content'].label = False
         self.fields['content'].widget.attrs.update({'autofocus': 'autofocus', 'placeholder': 'Send a message!'})
+        
+        
+        #form
