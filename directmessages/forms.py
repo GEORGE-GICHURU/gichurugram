@@ -13,4 +13,4 @@ class MessageForm(forms.ModelForm):
         self.fields['content'].widget.attrs.update({'autofocus': 'autofocus', 'placeholder': 'Send a message!'})
         
         
-        #form
+        
