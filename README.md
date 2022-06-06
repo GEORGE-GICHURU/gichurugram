@@ -69,7 +69,8 @@ Live Link: >
 
 ## Contact Information
 
-To reach me, email me at: > husseinomar6190@gmail.com
+To reach me, email me at: > gichurugeorge092@gmail.com
+
 
 License
 MIT License
