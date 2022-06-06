@@ -36,6 +36,7 @@ As a user I would like to:
 | Search users            | Username          | Results will be displayed on the results page       |
 | Login, Signup or Logout | Email, Password   | User will be either loggedin, registered, loggedout |
 | send a direct message to another user | on the navbar | user will be able to type in whatever message they want |
+
 ## SetUp / Installation Requirements
 
 ### Prerequisites
@@ -64,7 +65,7 @@ As a user I would like to:
 - Bootstrap
 - Javascript
 
-Live Link: > https://breezway-gallery.herokuapp.com/
+Live Link: > 
 
 ## Contact Information
 
