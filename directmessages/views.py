@@ -6,7 +6,7 @@ from .models import Message, User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import  Q
 from django.urls import reverse
-# from notifications.signals import notify
+# from notifications.signals import notif
 
 
 class MessageCreateView(LoginRequiredMixin, CreateView):
