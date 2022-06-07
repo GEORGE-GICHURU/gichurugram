@@ -24,7 +24,7 @@ As a user I would like to:
 - Can view the already uploaded images in the web app
 - Can search for there user in the web app
 - Can like or comment on there users posts
-- Can follow or unfollow other users
+- Can follow or unfollow other users on the explore page
 - Can edit profile account
 - Can view the explore page
 - Can be able to send a direct message to another user 
