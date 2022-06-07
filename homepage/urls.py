@@ -4,11 +4,11 @@ from .views import PostDetailView, CommentCreateView, public_profile, CommentUpd
 # import notifications.urls
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='gichurugram-home'),
+    path('home/', PostListView.as_view(), name='gichurugram-home'),
     path('about/us/', views.aboutUs, name='gichurugram-about-us'),
     path('about/jobs/', views.aboutJobs, name='gichurugram-about-jobs'),
     path('about/', views.redirectAboutView, name='gichurugram-about-us-redirect'),
-    path('explore/', ExploreListView.as_view(), name='gichurugram-explore'),
+    path('', ExploreListView.as_view(), name='gichurugram-explore'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
     path('comment/<int:pk>/update/', CommentUpdateView.as_view(), name='comment_update'),
     path('comment/<int:pk>/delete/', CommentDeleteView.as_view(), name='comment_delete'),
