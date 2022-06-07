@@ -91,14 +91,25 @@ WSGI_APPLICATION = 'gichurugram.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instagram_2',
-        'USER': 'postgres',
-        'PASSWORD': 'gichuru',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'instagram_2',
+#         'USER': 'postgres',
+#         'PASSWORD': 'gichuru',
+#     }
+# }
+DATABASES= {
+   'default':{
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':'d4mm52h94f3l9p',
+      'USER':'ekgbhtsrsxfsua',
+      'PASSWORD':'f8efee3b5d7cf28fcecef72b743b83a83338a221c7f79deec6d885dc69b2367e',
+      'HOST':'ec2-52-206-182-219.compute-1.amazonaws.com',
+      'PORT':'5432',
+   }
 }
+
 
 
 # Password validation
