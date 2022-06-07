@@ -22,7 +22,7 @@
 
 
                 <h3>{{ posts.count }} posts</h3>
-                <a href="{% url 'follower-list' username %}" id='author-link'>
+                <a href="{% url 'follower_list' username %}" id='author-link'>
 
                     <h3 id=followers>{{ followers.count }} followers</h3>
 
@@ -33,7 +33,7 @@
                 <h5>{{ username.profile.first_name }} {{ username.profile.last_name }}</h5>
                 <p class='text-secondary'>{{ username.profile.bio }}</p>
                 {% if not user == username %}
-                <a href="{% url 'message-form' username %}" class="btn btn-secondary">Message </a>
+                <a href="{% url 'message_form' username %}" class="btn btn-secondary">Message </a>
                 {% endif %}
             </div>
 <div id='postdivider'></div>
@@ -44,7 +44,7 @@
                     <div class='card'>
                 {% for image in p.images.all %}
                     {% if forloop.counter0 == 0 %}
-                    <a href="{% url 'post-detail' p.id %}" id="detail-link">
+                    <a href="{% url 'post_detail' p.id %}" id="detail-link">
                         <img class='card-img-top img-fluid' src={{ image.modelimage.url }} alt='images'>
                     </a>
                     {% endif %}

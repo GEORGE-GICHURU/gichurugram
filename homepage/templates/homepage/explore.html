@@ -13,7 +13,7 @@
 <div class='col-3 padding-0'>
     <div class='card text-center'>
 
-        <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
+        <a href="{% url 'public_profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             <br>
             {{profile.user.username}}
@@ -43,14 +43,14 @@
             {% if p.images.count > 1 %}
                 {% for image in p.images.all %}
                     {% if forloop.counter0 == 0 %}
-                        <a href="{% url 'post-detail' p.id %}" id="detail-link">
+                        <a href="{% url 'post_detail' p.id %}" id="detail-link">
                             <img class='card-img-top img-fluid' src='{{ image.modelimage.url }}' alt='images'>
                         </a>
                     {% endif %}
                 {% endfor %}
             {% else %}
                 {% for image in p.images.all %}
-                    <a href="{% url 'post-detail' p.id %}" id="detail-link">
+                    <a href="{% url 'post_detail' p.id %}" id="detail-link">
                         <img class='card-img-top img-fluid' src='{{ image.modelimage.url }}' alt='images'>
                     </a>
                 {% endfor %}

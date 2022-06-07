@@ -2,7 +2,7 @@
 {% load caps %}
 {% block content %}
 {% load cloudinary %}
-    <a href="{% url 'public-profile' p.author.username %}" id="author-link">
+    <a href="{% url 'public_profile' p.author.username %}" id="author-link">
         <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
         <strong>{{ p.author }}</strong>
     </a>
@@ -65,7 +65,7 @@
     {% endfor %}
 
 
-        <a href="{% url 'comment-form' p.id %}" id="coment-link"><i class="far fa-comment fa-lg post-buttons"></i></a>
+        <a href="{% url 'comment_form' p.id %}" id="coment-link"><i class="far fa-comment fa-lg post-buttons"></i></a>
 
         {% if p.author == user %}
 
@@ -73,8 +73,8 @@
                 <i class="fas fa-ellipsis-h post-buttons"></i>
             </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{% url 'post-update' p.id %}">Update</a>
-                    <a class="dropdown-item" href="{% url 'post-delete' p.id %}">Delete</a>
+                    <a class="dropdown-item" href="{% url 'post_update' p.id %}">Update</a>
+                    <a class="dropdown-item" href="{% url 'post_delete' p.id %}">Delete</a>
                 </div>
 
         {% endif %}
@@ -97,7 +97,7 @@
         </a>
 
 
-        <div class='mb-0'><p class='mb-0'><a href="{% url 'public-profile' p.author.username %}" id="author-link"><b>{{ p.author }}</b></a> {{ p.caption }}</p></div>
+        <div class='mb-0'><p class='mb-0'><a href="{% url 'public_profile' p.author.username %}" id="author-link"><b>{{ p.author }}</b></a> {{ p.caption }}</p></div>
         <div id='postdivider'>
                 <p id="post-detail-time">
                     <small>{{ p.date_posted|naturaltime|upper }}</small>
@@ -109,7 +109,7 @@
 
         {% for comment in p.comments.all reversed %}
         <div>
-            <a href="{% url 'public-profile' comment.author.username %}" id="author-link" id="author-link">
+            <a href="{% url 'public_profile' comment.author.username %}" id="author-link" id="author-link">
                 <b>  {{ comment.author }}</b>
             </a>
             {{ comment.content }}
@@ -120,8 +120,8 @@
                     <i class="fas fa-ellipsis-h post-buttons"></i>
                 </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{% url 'comment-update' comment.id %}">Update</a>
-                        <a class="dropdown-item" href="{% url 'comment-delete' comment.id %}">Delete</a>
+                        <a class="dropdown-item" href="{% url 'comment_update' comment.id %}">Update</a>
+                        <a class="dropdown-item" href="{% url 'comment_delete' comment.id %}">Delete</a>
                     </div>
             {% endif %}
         </div>

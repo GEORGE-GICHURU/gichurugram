@@ -26,8 +26,8 @@ class PostListView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = datetime.now()
-        context['follower'] = Follower.objects.filter( follower = self.request.user)
-        context['likesbyuser'] = Like.objects.filter(liker=self.request.user)
+        context['followers'] = Follower.objects.filter( follower = self.request.user)
+        context['posts'] = Post.objects.all()
         return context
 
 
@@ -97,7 +97,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name_suffix = '_update_form'
 
     def get_success_url(self):
-        return reverse('post-detail', kwargs={'pk': self.object.pk,})
+        return reverse('post_detail', kwargs={'pk': self.object.pk,})
 
     def form_valid(self, form):
         form.instance.author = self.request.user
