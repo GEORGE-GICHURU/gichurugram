@@ -66,7 +66,7 @@ As a user I would like to:
 - Bootstrap
 - Javascript
 
-Live Link: > 
+Live Link: > https://gichurugram2.herokuapp.com/
 
 ## Contact Information
 
