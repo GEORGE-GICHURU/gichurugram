@@ -5,7 +5,7 @@ from .models import Profile
 from django.forms.widgets import PasswordInput, TextInput
 
 
-# ideally wouldnt have plain text user/pw, could put in enviroment vairables but that seems overkill
+# ideally wouldnt have plain text user/pw, could put in enviroment vairables but that seems overkil
 class CustomAuthForm(AuthenticationForm):
     username = forms.CharField(widget=TextInput(attrs={'class': 'validate', 'value': 'DemoUser'}))
     password = forms.CharField(widget=PasswordInput(attrs={'value': 'impassword'}))
