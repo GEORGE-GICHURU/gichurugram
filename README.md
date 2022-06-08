@@ -1,4 +1,4 @@
-## Gichurugram
+## Gichurugram2
 
 This is a Instagram clone Web-App that enables users to register an account and be logged in. Users can also upload images to the feed so other users can like and comment on them. The platform also allows users to follow or unfollow other users. Finally, users can edit their profile account and log out whenever they want.
 
@@ -36,7 +36,7 @@ As a user I would like to:
 | Upload image            | Image, Caption    | The image will be posted to the feed page           |
 | Search users            | Username          | Results will be displayed on the results page       |
 | Login, Signup or Logout | Email, Password   | User will be either loggedin, registered, loggedout |
-| send a direct message to another user | on the navbar | user will be able to type in whatever message they want |
+| like or comment on a photo | pic | user will be able to like or comment on a photo |
 
 ## SetUp / Installation Requirements
 
